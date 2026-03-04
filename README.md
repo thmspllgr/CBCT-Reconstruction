@@ -1,15 +1,18 @@
+# CBCT-Reconstruction
+
 This project was started as part of my second year of Master. It aims at reconstructing 3D volumes from 2D projections of a rotating sample obtained via x-rays imaging. It is an extension of the classical CT Filtered Back Projection (FBP) algorithm: instead of considering x-rays parallel to the detector (with a x-ray source at infinity), we consider a ponctual source that emits x-rays in all directions with a detector of finite size, thus the x-rays arrive following a cone shape. This is the principle of Cone Beam Computerized Tomography (CBCT).
 
 ## Structure
 
 ```
-cbct-reconstruction
+CBCT-Reconstruction
 ├── data
 │   ├── 360                  # Folder containing 360 projections of a sample object (cylindric object with some internal and external structure)
 │   ├── 15                   # Folder containing 15 projections of the same object
 │   └── 4                    # Folder containing 4 projections of the same object
-├── reconstruction.py        # Entry point
-└── README.md                # Documentation
+├── LICENSE.md               # MIT license
+├── README.md                # Documentation
+└── reconstruction.py        # Entry point
 ```
 
 ## Usage
@@ -53,4 +56,5 @@ cbct-reconstruction
         ```
         reconstructed = iradon(density.T, theta=theta, circle=True)
         ```
+
 And add `from skimage.transform import iradon` at the top of `reconstruction.py`. By default `iradon` uses the Ram-Lak filter so we can use it as is.
