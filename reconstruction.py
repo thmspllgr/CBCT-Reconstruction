@@ -10,7 +10,7 @@ from scipy.fft import fft, ifft, fftfreq
 D = 30.87 # measured source-object distance (cm)
 d = 14.9 # measured object-detector distance (cm)
 pixel_size = 12.7 / 343 # cm   (we measured on our images 343px -> 12.7cm, so 1px = 12.7/343 cm)
-datapath = "CBCT-Reconstruction\\data\\360" # path to the folder that contains the projections
+datapath = os.path.join(os.path.dirname(__file__), "data", "360") # path to the folder that contains the projections
 
 ### Functions
 def get_sorted_files(directory, ext="*.png"):
