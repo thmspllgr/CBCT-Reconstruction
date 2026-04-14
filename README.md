@@ -24,7 +24,7 @@
 </p>
 
 
-## 📖 About this project
+## About this project
 
 This project was started as part of my second year of Master's degree. It aims at reconstructing 3D volumes from 2D projections of a rotating sample obtained via x-rays imaging. 
 
@@ -33,7 +33,7 @@ It is an extension of the classical CT Filtered Back Projection (FBP) algorithm:
 The data already available in the repo was acquired experimentally using a custom CT-scan setup, requiring an initial physical calibration to determine the exact geometric parameters (source-to-object and object-to-detector distances) used in the reconstruction pipeline.
 
 
-## 🔬 Brief introduction
+## Brief introduction
 
 Cone Beam Computerized Tomography is an advanced medical and industrial imaging modality where a divergent cone-shaped X-ray beam acquires 2D projections of an object over a 360-degree rotation. Unlike conventional fan-beam CT, CBCT captures a volumetric dataset in a single rotation, significantly reducing acquisition time.
 
@@ -68,7 +68,7 @@ $$\large f(x,y,z)=\int_{0}^{2\pi}\frac{D^2}{U^2(x,y,\beta)}p_f(u',v',\beta)d\bet
 Where $U$ is the orthogonal distance from the X-ray source to the voxel $(x,y,z)$ projected along the central ray.
 
 
-## 📂 Repository structure
+## Repository structure
 
 ```Plaintext
 CBCT-Reconstruction
@@ -82,7 +82,7 @@ CBCT-Reconstruction
 ```
 
 
-## ⚙️ Installation & dependencies
+## Installation & dependencies
 
 To run this project, you will need the following Python libraries: `numpy`, `matplotlib`, `tifffile`, `scikit-image`, and `scipy`.
 
@@ -93,7 +93,7 @@ pip install numpy matplotlib tifffile scikit-image scipy
 ```
 
 
-## 🚀 Usage
+## Usage
 
 1. **Prepare your data:** \
    Place your 2D projection images (e.g., `.png`, `.tif`) in the data directory. By default, the script looks for files in `CBCT-Reconstruction/data/360`, and the directory already contains some data. The script automatically sorts files sequentially (e.g., `img1.png`, `img2.png`, ...) so try to name them in the right order.
